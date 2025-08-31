@@ -1,0 +1,154 @@
+/* ====== ESTILOS GENERALES ====== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* ====== ENCABEZADO ====== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    border-radius: 50%;
+    width: 80px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ====== SECCIÓN PRINCIPAL ====== */
+main {
+    text-align: center;
+    padding: 30px;
+}
+
+.busqueda {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.busqueda input {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.busqueda button {
+    background-color: #007bff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.busqueda button:hover {
+    background-color: #0056b3;
+}
+
+/* ====== TARJETAS DE ESTUDIANTES ====== */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* siempre 3 columnas */
+    gap: 20px; /* espacio entre tarjetas */
+    margin-top: 20px;
+}
+
+.tarjeta {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.tarjeta img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.tarjeta h3 {
+    margin: 10px 0 5px 0;
+}
+
+.tarjeta p {
+    color: #666;
+    font-size: 14px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.redes a {
+    margin: 0 5px;
+    color: #003366;
+    font-size: 18px;
+}
+
+.redes a:hover {
+    color: #007bff;
+}
+
+/* ====== PIE DE PÁGINA ====== */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.redes-footer a {
+    margin: 0 10px;
+    color: white;
+    font-size: 18px;
+}
+
+.redes-footer a:hover {
+    color: #00aced;
+}

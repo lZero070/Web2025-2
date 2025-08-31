@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - JADER</title>
+    <link rel="stylesheet" href="./css/styles2.css">
+</head>
+
+<body>
+    <!--
+    Contenedor principal del CV:
+    - Izquierda: sidebar (foto, contacto, referencias, web)
+    - Derecha: contenido (sobre mi, experiencia, educacion, habilidades, idiomas)-->
+    <div class="cv">
+
+        <!-- ============== COLUMNA IZQUIERDA (SIDEBAR) ============== -->
+        <aside class="cv__sidebar">
+            <!--aside:  indica contenido complementario (parte izquierda).-->
+            <!-- Bloque de perfil (foto, nombre y rol) -->
+            <div class="perfil">
+                <!--Imagen de perfil. 'alt' describe la imagen.-->
+                <img class="avatar" src="./img/Perfil2.jpg" alt="Foto de perfil" />
+
+                <!-- h1 es el titulo principal del documento. Aqui se usa el salto de linea <br>
+                para dividir nombre y apellidos en dos lineas. -->
+                <h1 class="name">JADER ISAAC<br />TORREGROZA CASTRO</h1>
+
+                <!-- Cargo o rol principal -->
+                <p class="role">Estudiante de Ingenieria de Sistemas</p>
+            </div>
+
+            <!-- Seccion de contacto -->
+            <section class="box">
+                <!--h2 como subtitulo de seccion. box__title añade la linea divisoria blanca del sidebar.-->
+                <h2 class="box__title">CONTACTO</h2>
+
+                <!--Lista para datos de contacto.-->
+                <ul class="list">
+                    <li><strong>Cel:</strong> (+57) 3128592164</li>
+                    <li><strong>Email:</strong> jadertorregroza@unimagdalena.edu.co</li>
+                    <li><strong>Dirección:</strong> Carrera 22 manzana i, Barrio  Laureles</li>
+                    <li><strong>ID:</strong> 2020114217</li>
+                </ul>
+            </section>
+
+            <!-- Seccion de referencias -->
+            <section class="box">
+                <h2 class="box__title">REFERENCIAS</h2>
+                <ul class="list">
+                    <li>Jhon Cumplido - (+57) 3232468395</li>
+                    <li>Carlos Linares- (+57) 3003304605</li>
+                </ul>
+            </section>
+
+            <!-- Seccion sitio web -->
+            <section class="box">
+                <h2 class="box__title">SITIO WEB</h2>
+                <!--
+          El enlace tiene clase .link para estilo.-->
+                <p><a href="#" class="link">https://www.facebook.com/Jader.t.01</a></p>
+            </section>
+        </aside>
+
+        <!-- ============== COLUMNA DERECHA (CONTENIDO) ============== -->
+        <main class="cv__main">
+            <!--main: parte derecha del documento. Aqui van las secciones de contenido.-->
+
+            <!-- Sobre mi -->
+            <section class="section">
+                <h2 class="section__title">SOBRE MI</h2>
+                <p>
+                    Soy un joven apasionado y con mucha motivacion, en proceso de mi formacion universitaria en la carrera de
+                    ingenieria de sistema. Me caracterizo por ser una persona con ganas de aprender y crecer en mi carrera profesional. 
+                </p>
+            </section>
+
+            <!-- Experiencia (formato linea de tiempo) -->
+            <section class="section">
+                <h2 class="section__title">EXPERIENCIA</h2>
+
+                <!--.timeline: contenedor vertical de eventos.
+          Cada .row es una fila con 3 columnas (año | línea | detalle).-->
+                <div class="timeline">
+                    <!-- Evento 1 -->
+                    <div class="row">
+                        <!-- Columna 1: año -->
+                        <div class="year">2023</div>
+
+                        <!-- Columna 2: linea vertical + punto (se dibuja con ::before y ::after) -->
+                        <div class="marker"></div>
+
+                        <!-- Columna 3: descripcion del evento -->
+                        <div class="detail">
+                            <h3>Gestionar bases de datos con MySQL</h3>
+                        </div>
+                    </div>
+
+                    <!-- Evento 2 -->
+                    <div class="row">
+                        <div class="year">2022</div>
+                        <div class="marker"></div>
+                        <div class="detail">
+                            <h3>Pequeños proyectos con Python</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Educacion (misma linea de tiempo) -->
+            <section class="section">
+                <h2 class="section__title">EDUCACIÓN</h2>
+
+                <div class="timeline">
+                    <div class="row">
+                        <div class="year">2013</div>
+                        <div class="marker"></div>
+                        <div class="detail">
+                            <h3>Diploma de Primaria</h3>
+                            <p>Vereda Brasil 2</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="year">2019</div>
+                        <div class="marker"></div>
+                        <div class="detail">
+                            <h3>Diploma de bachiller</h3>
+                            <p>Institucion educativa departamental Alberto Caballero</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="year">2020</div>
+                        <div class="marker"></div>
+                        <div class="detail">
+                            <h3>En proceso de formacion en Ingenieria de Sistemas</h3>
+                            <p>Universidad Del Magdalena</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Habilidades (chips) -->
+            <section class="section">
+                <h2 class="section__title">HABILIDADES</h2>
+                <!--
+          Lista horizontal con "chips" estilizados para que sea legible y compacta.-->
+                <ul class="tags">
+                    <li>Adaptabilidad</li>
+                    <li>Comunicacion</li>
+                    <li>Toma de decisiones</li>
+                    <li>Trabajo en equipo</li>
+                    <li>Flexible</li>
+                </ul>
+            </section>
+
+            <!-- Idiomas -->
+            <section class="section">
+                <h2 class="section__title">IDIOMAS</h2>
+                <ul class="tags">
+                    <li>Español</li>
+                    <li>Inglés</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

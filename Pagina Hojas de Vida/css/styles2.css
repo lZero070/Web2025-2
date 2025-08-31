@@ -1,0 +1,226 @@
+:root {
+    --bg: #f2f4f7;/* fondo general */
+    --ink: #1a2733;/* color principal del texto */
+    --muted: #6b7a89;/* texto secundario */
+    --panel: #ffffff;/* fondo del papel de a hoja de vida */
+    --primary: #213342;/* azul/gris del sidebar y titulos */
+    --divider: #1f2c39;/* lineas divisorias y linea de timeline */
+    --chip: #e9eef3;/* fondo para chips de habilidades/idiomas */
+}
+
+/* =======================
+   Reset basico
+   - Box sizing consistente
+   - Quitar margenes/paddings por defecto
+======================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    /* Tipografia del sistema */
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;/* mejora la legibilidad en parrafos */
+}
+
+/* =======================
+   LAYOUT PRINCIPAL DEL CV
+   2 columnas: 300px (sidebar) + flexible (contenido)
+======================= */
+.cv {
+    max-width: 1100px;/* ancho maximo */
+    margin: 24px auto;/* centrado horizontal y margen vertical */
+    display: grid;
+    grid-template-columns: 300px 1fr;/* sidebar y contenido */
+    background: var(--panel);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);/* sombra sutil */
+}
+
+/* ===== Sidebar (columna izquierda) ===== */
+.cv__sidebar {
+    background: var(--primary);
+    color: #fff;/* texto blanco */
+    padding: 22px 20px 28px;/*interior */
+}
+
+/* Bloque de perfil (foto, nombre, rol) */
+.perfil {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;/* foto circular */
+    object-fit: cover;/* recorta sin deformar */
+    border: 4px solid #fff;/* circulo blanco alrededor */
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 1.3rem;
+    font-weight: 800;/*marcado */
+    text-transform: uppercase;/* estilo */
+}
+
+.role {
+    font-size: .95rem;
+    color: rgba(255, 255, 255, .8);/* contraste mas suave para subtitulo */
+}
+
+/* Caja de seccion en el sidebar (contacto, referencias, web) */
+.box {
+    padding: 14px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, .25);/* separador tenue */
+}
+
+.box:last-child {
+    border-bottom: none
+}
+
+.box__title {
+    font-size: .95rem;
+    letter-spacing: .5px;
+    font-weight: 800;
+    border-bottom: 2px solid rgba(255, 255, 255, .6);/* subrayado mas fuerte */
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+/* Listas del sidebar */
+.list {
+    list-style: none;/* sin viñetas */
+    display: grid;/* separacion vertical uniforme */
+    gap: 8px;
+}
+
+/* Enlaces del sidebar (sitio web) */
+.link {
+    color: #fff;
+    text-decoration: none;
+    word-break: break-all;
+    /* para evitar desplazamientos en URLs largas */
+}
+
+.link:hover {
+    text-decoration: underline
+}
+
+/* ===== Columna derecha (contenido principal) ===== */
+.cv__main {
+    padding: 26px 28px 36px
+}
+
+.section {
+    margin-top: 18px
+}
+
+.section__title {
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--primary);
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--divider);/*línea gruesa*/
+    margin-bottom: 10px;
+}
+
+/* =======================
+   Timeline (Experiencia / Educacion)
+   3 columnas:
+   [AÑO] [LINEA] [DETALLE]
+======================= */
+.timeline {
+    display: grid;
+    row-gap: 16px;/* espacio vertical entre eventos */
+    margin-top: 6px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 64px 16px 1fr;/* ancho fijo para año, estrecho para linea, resto para detalle */
+    column-gap: 16px;
+    align-items: start;
+}
+
+.year {
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 1px;/* estetica espaciado de numero */
+}
+
+/* La columna "marker" dibuja la linea vertical y el punto */
+.marker {
+    position: relative
+}
+
+.marker::before {
+    /* Linea vertical continua */
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 3px;
+    height: 100%;
+    background: var(--divider);
+    border-radius: 2px;
+}
+
+.marker::after {
+    /* Punto sobre la linea para marcar el evento */
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid var(--primary);
+}
+
+.detail h3 {
+    font-size: 1.02rem;
+    margin-bottom: 2px;
+}
+
+.detail p {
+    color: var(--muted)
+}
+
+/* ===== Chips (habilidades e idiomas) ===== */
+.tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;/* permite saltar a la siguiente linea */
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.tags li {
+    background: var(--chip);
+    padding: 6px 10px;
+    border-radius: 999px;/* pildora */
+    font-weight: 600;
+    font-size: .95rem;
+}
+
+/* =======================
+   Responsivo
+   - A menos de 860px, el layout pasa a una sola columna (sidebar arriba)
+======================= */
+@media (max-width: 860px) {
+    .cv {
+        grid-template-columns: 1fr
+    }
+}
