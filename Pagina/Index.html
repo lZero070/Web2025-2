@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +9,45 @@
     <!-- Fuente de iconos (para redes sociales) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
-    <!-- ====== ENCABEZADO ====== -->
-    <header>
-        <div class="logo">
-            <!-- Aquí podrías poner la imagen de un logotipo -->
-            <img src="./img/Logo.png" alt="Logo Campus">
-            <h1>Campus Virtual</h1>
+    <!-- Barra superior clara -->
+    <div class="topbar">
+        <div class="left-section">
+            <img src="./img/Logo.png" alt="Logo Universidad" class="logo">
+            <h1 class="title">Campus Virtual</h1>
         </div>
-        <nav>
-            <!-- Menú de navegación con enlaces simulados -->
-            <ul>
-                <li><a href="#">Contenido</a></li>
-                <li><a href="#">Asignaciones</a></li>
-                <li><a href="#">Foros</a></li>
-                <li><a href="#">Cuestionarios</a></li>
-                <li><a href="#">Evaluación</a></li>
-                <li><a href="#">Herramientas</a></li>
-            </ul>
-        </nav>
-    </header>
+
+        <div class="center-section">
+            <h2 class="subject">Programación Orientada a Objetos</h2>
+        </div>
+
+        <div class="right-section">
+            <i class="fas fa-th"></i><!-- Aplicaciones -->
+            <i class="fas fa-envelope"></i> <!-- Mensajes -->
+            <i class="fas fa-comments"></i> <!-- Comentarios -->
+            <i class="fas fa-bell"></i> <!-- Notificaciones -->
+            <div class="professor-info">
+                <img src="./img/Profesor.jpg" alt="Profesor" class="professor-photo">
+                <span>Camilo Sanches Pedrozo</span>
+                <i class="fas fa-cog settings-icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra azul de navegación -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Contenido</a></li>
+            <li><a href="#">Asignaciones</a></li>
+            <li><a href="#">Foros</a></li>
+            <li><a href="#">Cuestionarios</a></li>
+            <li><a href="#">Evaluación</a></li>
+            <li><a href="#">Herramientas</a></li>
+        </ul>
+    </nav>
+
 
     <!-- ====== SECCIÓN PRINCIPAL ====== -->
     <main>
@@ -93,7 +112,7 @@
                     <a href="#"><i class="fab fa-facebook"></i></a>
                 </div>
             </div>
-            
+
             <!-- Tarjeta 5 -->
             <div class="tarjeta">
                 <img src="./img/mujer2.jpg" alt="Foto Estudiante">
@@ -106,7 +125,7 @@
                     <a href="#"><i class="fab fa-facebook"></i></a>
                 </div>
             </div>
-            
+
             <!-- Tarjeta 6 -->
             <div class="tarjeta">
                 <img src="./img/mujer3.webp" alt="Foto Estudiante">
@@ -118,8 +137,8 @@
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
                 </div>
-            </div>            
-            
+            </div>
+
         </section>
     </main>
 
@@ -134,4 +153,5 @@
     </footer>
 
 </body>
+
 </html>
