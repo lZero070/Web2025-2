@@ -40,7 +40,7 @@ function verificarNumero() {
 
     // Validar que sea un número válido entre 1 y 100
     if (isNaN(numeroJugador) || numeroJugador < 1 || numeroJugador > 100) {
-        mensaje.textContent = "Ingresa un número válido entre 1 y 100.";
+        mensaje.textContent = "Ingresa un numero válido entre 1 y 100.";
         mensaje.style.color = "red";
         return;
     }
