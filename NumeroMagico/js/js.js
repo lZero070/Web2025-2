@@ -55,21 +55,21 @@ function verificarNumero() {
 
     // Verificar si el jugador acertó
     if (numeroJugador === numeroSecreto) {
-        mensaje.textContent = "¡Felicidades! Adivinaste el número en " + intentos + " intentos.";
+        mensaje.textContent = "¡Felicidades! Adivinaste el numero en " + intentos + " intentos.";
         mensaje.style.color = "green";
         finDelJuego();
     } else if (intentos >= intentosMaximos) {
         // Si se agotaron los intentos
-        mensaje.textContent = "Se acabaron tus intentos. El número era: " + numeroSecreto;
+        mensaje.textContent = "Se acabaron tus intentos. El numero era: " + numeroSecreto;
         mensaje.style.color = "red";
         finDelJuego();
     } else {
         // Dar pista: mayor o menor
         if (numeroJugador < numeroSecreto) {
-            mensaje.textContent = "El número mágico es mayor.";
+            mensaje.textContent = "El numero magico es mayor.";
             mensaje.style.color = "blue";
         } else {
-            mensaje.textContent = "El número mágico es menor.";
+            mensaje.textContent = "El numero magico es menor.";
             mensaje.style.color = "blue";
         }
     }
