@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero Magico</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Numero Magico</h1>
+        <p>Adivina el número entre 1 y 100. Tienes 10 intentos</p>
+
+        <!-- Campo de entrada -->
+        <input type="number" id="inputNumero" min="1" max="100" placeholder="Ingresa tu numero">
+
+        <!-- Boton para ingresar el numero -->
+        <button id="btnProbar" onclick="verificarNumero()">Intentar</button>
+
+        <!-- Mensajes -->
+        <div id="mensaje" class="feedback"></div>
+
+        <!-- Historial de intentos -->
+        <div class="historial">
+            <h3>Historial de intentos:</h3>
+            <ul id="listaHistorial"></ul>
+        </div>
+
+        <!-- Botón de reinicio (oculto al inicio) -->
+        <button id="btnReiniciar" style="display:none;" onclick="reiniciarJuego()">Jugar de nuevo</button>
+    </div>
+
+    <!-- Enlazamos el archivo JavaScript externo -->
+    <script src="./js/js.js"></script>
+</body>
+
+</html>
