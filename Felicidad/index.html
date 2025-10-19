@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Experiencia - Universidad de la Felicidad</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Universidad de la Felicidad</h1>
+    <nav>
+      <button class="nav-btn" data-seccion="inicio">Inicio</button>
+      <button class="nav-btn" data-seccion="galeria">Galería</button>
+      <button class="nav-btn" data-seccion="reflexion">Reflexión</button>
+      <button class="nav-btn" data-seccion="contador">Contador</button>
+      <button class="nav-btn" data-seccion="evidencia">Evidencia</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- inicio -->
+    <section id="inicio" class="seccion activa">
+      <h2>Bienvenido</h2>
+      <p>Aquí podrás ver mi experiencia en la cuarta edición de la <strong>Universidad de la Felicidad</strong> en la Universidad del Magdalena.</p>
+      <p>Usa el menú superior para navegar entre las secciones.</p>
+    </section>
+
+    <!-- galeria -->
+    <section id="galeria" class="seccion">
+      <h2>Momentos del Festival</h2>
+      <!-- Contenedor donde se cargan las imágenes-->
+      <div id="contenedor-galeria" class="galeria"></div>
+    </section>
+
+    <!-- reflexion -->
+    <section id="reflexion" class="seccion">
+      <h2>Reflexión Personal</h2>
+      <strong>
+        Participar en la Universidad de la Felicidad fue una experiencia enriquecedora que me permitió comprender que la verdadera felicidad no se encuentra únicamente en los grandes logros, sino también en las pequeñas acciones cotidianas. Durante las jornadas, escuché diferentes perspectivas sobre lo que significa ser feliz: desde disfrutar un paseo en bicicleta hasta mantener el equilibrio entre la salud física y mental.
+        Estos momentos me hicieron pensar en cómo, desde la programación web, también podemos aportar al bienestar de las personas. La tecnología puede ser una herramienta poderosa para conectar, inspirar y generar sonrisas, siempre que se use con propósito y empatía. Crear aplicaciones o páginas web que fomenten la creatividad, la comunidad y la expresión positiva puede transformar la experiencia universitaria en algo más humano y cercano.
+        Este Festival me dejó la enseñanza de que el desarrollo tecnológico y la felicidad no son opuestos, sino aliados en la construcción de un entorno más alegre, solidario y consciente.
+      </strong>
+    </section>
+
+    <!-- Contador de sonrisas -->
+    <section id="contador" class="seccion">
+      <h2>Contador de Sonrisas 😊</h2>
+      <p>¡Haz clic en el botón y comparte una sonrisa!</p>
+      <button id="btnSonrisa">😊 Sonreír</button>
+      <h3 id="numSonrisas">0 sonrisas</h3>
+    </section>
+
+    <!-- evidencia de asistencia -->
+    <section id="evidencia" class="seccion">
+      <h2>Evidencia de Asistencia</h2>
+      <p><strong>Nombre:</strong> Jader Isaac Torregroza Castro</p>
+      <p><strong>Fecha y hora del evento:</strong> Viernes 17 de octubre 8:00am - 12:00pm</p>
+      <img src="./img/foto.jpg" alt="Yo en el festival" class="foto-evidencia">
+    </section>
+  </main>
+
+  <!-- pie de pagina -->
+  <footer>
+    <p>Programación Web - Unimagdalena</p>
+  </footer>
+
+  <script src="./js/js.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+body {
+  font-family: "Poppins", sans-serif; 
+  margin: 0;
+  background: linear-gradient(180deg, #fff9c4, #ffecb3, #ffe0b2); 
+  color: #333;
+  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+/* encabezado */
+header {
+  background: linear-gradient(90deg, #ffca28, #ffb300, #ff9800); 
+  padding: 15px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra sutil debajo del encabezado */
+}
+
+/* menu */
+nav {
+  margin-top: 10px;
+}
+
+/* Botones del menú */
+.nav-btn {
+  background-color: white;
+  color: #ff9800;
+  border: none;
+  margin: 5px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s; /* Suaviza efectos al pasar el mouse */
+}
+
+/* Efecto hover (al pasar el cursor) */
+.nav-btn:hover {
+  background-color: #fff3e0;
+  transform: scale(1.05);
+}
+
+/* secciones */
+.seccion {
+  display: none; /* Por defecto, las secciones están ocultas */
+  padding: 40px 20px;
+  text-align: center;
+  min-height: 70vh; /* Ocupa buena parte de la pantalla */
+}
+
+/* Solo la sección activa se muestra */
+.seccion.activa {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out; /* Animación de entrada */
+}
+
+/* Animación de aparición suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* galeria */
+.galeria {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las imágenes se acomoden en varias filas */
+  justify-content: center;
+  gap: 15px; /* Espacio entre elementos */
+}
+
+/* Imágenes y videos de la galería */
+.galeria img, .galeria video {
+  width: 280px;
+  height: 180px;
+  object-fit: cover; /* Mantiene proporciones sin deformar */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+/* Efecto zoom al pasar el cursor */
+.galeria img:hover, .galeria video:hover {
+  transform: scale(1.05);
+}
+
+/* boton de sonrisas */
+button#btnSonrisa {
+  background-color: #ffb300;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Efecto hover para el botón de sonrisas */
+button#btnSonrisa:hover {
+  background-color: #ffa000;
+  transform: scale(1.05);
+}
+
+/* Texto que muestra la cantidad de sonrisas */
+#numSonrisas {
+  font-size: 1.5em;
+  color: #ff6f00;
+  margin-top: 15px;
+}
+
+/* evidencia */
+.foto-evidencia {
+  width: 250px;
+  border-radius: 15px;
+  margin-top: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Da un efecto de profundidad */
+}
+
+/* pie de pagina */
+footer {
+  background-color: #ffb300;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* animación del contador*/
+.emoji {
+  position: fixed;
+  font-size: 2rem;
+  animation: flotar 2s ease-out forwards; /* Efecto de flotar hacia arriba */
+}
+
+/* Animación para los emojis */
+@keyframes flotar {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-100px); opacity: 0; }
+}
+
+
+/* Ajustar imágenes y videos */
+@media (max-width: 768px) {
+  .galeria img, .galeria video {
+    width: 90%;
+  }
+}
